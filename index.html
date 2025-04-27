@@ -4,295 +4,218 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>José Ignacio Taj-Taj | CV Académico Profesional</title>
-  
-  <!-- Favicon -->
+
   <link rel="icon" href="https://dummyimage.com/32x32/0056b3/ffffff.png&text=JT" type="image/png">
 
   <style>
-    /* RESET */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f4f6f8;
-      display: flex;
-      min-height: 100vh;
-      flex-direction: column;
-    }
-
-    /* HEADER */
-    .header {
-      width: 100%;
-      height: 300px;
-      background: url('banner.jpeg') center/cover no-repeat;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
-    }
-
-    .header h1 {
-      font-size: 2.5rem;
-    }
-
-    .header p {
-      margin-top: 10px;
-      font-size: 1.2rem;
-    }
-
-    .header .download-btn {
-      margin-top: 20px;
-      padding: 10px 25px;
-      background: #0056b3;
-      color: white;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-
-    .header .download-btn:hover {
-      background: #007bff;
-    }
-
-    /* LAYOUT */
-    .layout {
-      display: flex;
-      flex: 1;
-    }
-
-    /* MENU LATERAL */
-    .sidebar {
-      background-color: #0056b3;
-      color: white;
-      width: 250px;
-      padding: 30px 20px;
-      position: sticky;
-      top: 0;
-      height: 100vh;
-    }
-
-    .sidebar h2 {
-      margin-bottom: 30px;
-      font-size: 1.8em;
-    }
-
-    .sidebar a {
-      display: block;
-      color: white;
-      text-decoration: none;
-      margin: 15px 0;
-      font-weight: bold;
-      transition: background-color 0.3s;
-      padding: 10px;
-      border-radius: 6px;
-    }
-
-    .sidebar a:hover {
-      background-color: #007bff;
-    }
-
-    /* CONTENIDO PRINCIPAL */
-    .main {
-      flex-grow: 1;
-      padding: 30px;
-    }
-
-    section {
-      margin-bottom: 60px;
-    }
-
-    h1, h2, h3 {
-      color: #0056b3;
-      margin-bottom: 20px;
-    }
-
-    p, li {
-      line-height: 1.6;
-      margin-bottom: 10px;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    /* BOTON FLOTANTE */
-    .floating-btn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #0056b3;
-      color: white;
-      padding: 14px 28px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      transition: background-color 0.3s;
-      z-index: 1000;
-    }
-
-    .floating-btn:hover {
-      background: #007bff;
-    }
-
-    /* RESPONSIVE */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f4f6f8; display: flex; flex-direction: column; min-height: 100vh; }
+    .header { width: 100%; height: 300px; background: url('banner.jpeg') center/cover no-repeat; position: relative; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+    .header h1 { font-size: 2.5rem; color: black; text-shadow: none; }
+    .header p { margin-top: 10px; font-size: 1.2rem; color: white; text-shadow: 1px 1px 5px rgba(0,0,0,0.7); }
+    .download-btn { margin-top: 20px; padding: 10px 25px; background: #0056b3; color: white; border-radius: 30px; text-decoration: none; font-weight: bold; transition: background 0.3s; }
+    .download-btn:hover { background: #007bff; }
+    .layout { display: flex; flex: 1; }
+    .sidebar { background-color: #0056b3; color: white; width: 250px; padding: 30px 20px; position: sticky; top: 0; height: 100vh; }
+    .sidebar h2 { margin-bottom: 30px; font-size: 1.8em; }
+    .sidebar a { display: block; color: white; text-decoration: none; margin: 15px 0; font-weight: bold; transition: background-color 0.3s; padding: 10px; border-radius: 6px; }
+    .sidebar a:hover { background-color: #007bff; }
+    .main { flex-grow: 1; padding: 30px; }
+    section { margin-bottom: 60px; }
+    h1, h2, h3 { color: #0056b3; margin-bottom: 20px; }
+    p, li { line-height: 1.6; margin-bottom: 10px; }
+    ul { padding-left: 20px; }
+    .profile-photo { width: 160px; height: 160px; border-radius: 50%; object-fit: cover; border: 4px solid white; margin: 20px auto; display: block; cursor: pointer; box-shadow: 0 4px 8px rgba(0,0,0,0.3); transition: transform 0.3s; }
+    .profile-photo:hover { transform: scale(1.05); }
+    .floating-btn { position: fixed; bottom: 20px; right: 20px; background: #0056b3; color: white; padding: 14px 28px; border-radius: 30px; text-decoration: none; font-weight: bold; box-shadow: 0 4px 8px rgba(0,0,0,0.2); transition: background-color 0.3s; z-index: 1000; }
+    .floating-btn:hover { background: #007bff; }
+    .modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.8); }
+    .modal-content { margin: 10% auto; display: block; width: 300px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.5); }
+    .modal-content:hover { transform: scale(1.02); }
+    .close { position: absolute; top: 30px; right: 50px; color: white; font-size: 40px; font-weight: bold; cursor: pointer; }
     @media (max-width: 768px) {
-      .layout {
-        flex-direction: column;
-      }
-
-      .sidebar {
-        width: 100%;
-        height: auto;
-        position: relative;
-      }
-
-      .sidebar a {
-        margin: 10px;
-        text-align: center;
-      }
+      .layout { flex-direction: column; }
+      .sidebar { width: 100%; height: auto; position: relative; }
+      .sidebar a { margin: 10px; text-align: center; }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- Banner Superior -->
-  <div class="header">
-    <h1>José Ignacio Taj-Taj</h1>
-    <p>Analista Senior en Finanzas | Ingeniero Comercial UC | MBA</p>
-    <a href="Curriculum_JoseIgnacioTajTaj.pdf" class="download-btn" target="_blank">📥 Descargar CV</a>
+<div class="header">
+  <h1>José Ignacio Taj-Taj</h1>
+  <p>Analista Senior en Finanzas | Ingeniero Comercial UC | MBA</p>
+  <a href="./Curriculum_JoseIgnacioTajTaj.pdf.pdf" class="download-btn" target="_blank">📥 Descargar CV</a>
+</div>
+
+<div class="layout">
+
+  <div class="sidebar">
+    <h2>Mi CV</h2>
+    <a href="#resumen">🧠 Resumen</a>
+    <a href="#experiencia">💼 Experiencia</a>
+    <a href="#educacion">🎓 Educación</a>
+    <a href="#certificaciones">📚 Certificaciones</a>
+    <a href="#habilidades">🛠️ Habilidades</a>
+    <a href="#proyectos">📊 Proyectos</a>
+    <a href="#idiomas">🗣️ Idiomas</a>
+    <a href="#intereses">🎯 Intereses</a>
+    <a href="#contacto">📩 Contacto</a>
   </div>
 
-  <!-- Layout general -->
-  <div class="layout">
+  <div class="main">
 
-    <!-- Sidebar -->
-    <div class="sidebar">
-      <h2>Mi CV</h2>
-      <a href="#resumen">🧠 Resumen</a>
-      <a href="#experiencia">💼 Experiencia</a>
-      <a href="#educacion">🎓 Educación</a>
-      <a href="#certificaciones">📚 Certificaciones</a>
-      <a href="#habilidades">🛠️ Habilidades</a>
-      <a href="#proyectos">📊 Proyectos</a>
-      <a href="#idiomas">🗣️ Idiomas</a>
-      <a href="#intereses">🎯 Intereses</a>
-      <a href="#contacto">📩 Contacto</a>
-    </div>
+<section id="resumen">
+  <h2>🧠 Resumen Profesional</h2>
+  <img src="perfil-picaai.png" alt="Foto de José Ignacio Taj-Taj" class="profile-photo" id="profilePhoto">
+  <p>Ingeniero Comercial titulado de la Pontificia Universidad Católica de Chile, con MBA y Magíster en Economía. Profesional con más de 8 años de experiencia en el sector financiero y de seguros, especializado en análisis estratégico, control de riesgos operacionales, automatización de procesos de recaudación y optimización de KPIs. Experto en herramientas de business intelligence como Power BI, SQL Server, SAP, Excel avanzado, y metodologías ágiles para gestión de proyectos.</p>
+</section>
 
-    <!-- Main Content -->
-    <div class="main">
+<section id="experiencia">
+  <h2>💼 Experiencia Laboral</h2>
 
-      <section id="resumen">
-        <h2>🧠 Resumen Profesional</h2>
-        <p>Ingeniero Comercial titulado de la Pontificia Universidad Católica de Chile, con un Máster en Administración de Empresas (MBA) y Magíster en Economía. Experiencia sólida en el sector financiero, seguros y bancario, especializado en análisis estratégico, riesgos operacionales, recaudación y visualización de datos. Capacitado en herramientas de BI (Power BI, SQL Server) y gestión de proyectos. Fuerte enfoque en optimización de procesos, automatización y cumplimiento normativo.</p>
-      </section>
+  <h3>Zurich Santander Chile (2023 - 2025)</h3>
+  <p><em>Analista Senior de Recaudación</em></p>
+  <ul>
+    <li>Gestión estratégica de medios de pago (WebPay, PAC, PAT) y control operativo de recaudaciones.</li>
+    <li>Diseño de KPIs de recaudación en Power BI para informes ejecutivos y regulatorios.</li>
+    <li>Optimización de procesos de conciliación contable, logrando una reducción del 25% en tiempos de cierre mensual.</li>
+    <li>Automatización de reportería financiera para la CMF y entes de control.</li>
+    <li>Colaboración directa con áreas de Operaciones, Legal y Tecnología para el cumplimiento normativo (SERNAC Financiero).</li>
+  </ul>
 
-      <section id="experiencia">
-        <h2>💼 Experiencia Laboral</h2>
-        <ul>
-          <li><strong>Zurich Santander</strong> (2023-2025) - Analista Senior de Recaudación</li>
-          <ul>
-            <li>Gestión de medios de pago y recaudación de primas.</li>
-            <li>Control de comisiones, cierres financieros y reportería interna.</li>
-            <li>Interacción con entes reguladores (CMF, SERNAC).</li>
-          </ul>
-          <li><strong>BNP Paribas Cardif</strong> (2019-2023) - Analista Senior de Riesgo Operacional</li>
-          <ul>
-            <li>Levantamiento y control de riesgos operativos.</li>
-            <li>Implementación de matrices de riesgo y reportes SBR.</li>
-            <li>Visualización de KPIs estratégicos en SQL Server y Power BI.</li>
-          </ul>
-          <li><strong>Banco Ripley</strong> (2015-2019) - Analista Comercial Senior</li>
-          <ul>
-            <li>Análisis de ventas multicanal y planificación estratégica.</li>
-            <li>Automatización de reportes comerciales con BI.</li>
-          </ul>
-        </ul>
-      </section>
+  <h3>BNP Paribas Cardif Chile (2019 - 2023)</h3>
+  <p><em>Analista Senior de Riesgo Operacional</em></p>
+  <ul>
+    <li>Implementación de matrices de riesgo operacional, asegurando cobertura del 100% de procesos críticos de la compañía.</li>
+    <li>Elaboración de reportes de autoevaluación de riesgos (SBR) para reguladores internos y externos.</li>
+    <li>Desarrollo de dashboards interactivos en Power BI para análisis de incidentes y pérdidas operacionales.</li>
+    <li>Levantamiento de procedimientos internos de control para prevención de fraudes financieros.</li>
+  </ul>
 
-      <section id="educacion">
-        <h2>🎓 Educación</h2>
-        <ul>
-          <li>Ingeniería Comercial – Pontificia Universidad Católica de Chile</li>
-          <li>Máster en Administración de Empresas (MBA)</li>
-          <li>Magíster en Economía</li>
-          <li>Diplomado en Marketing Digital y Gestión Estratégica</li>
-        </ul>
-      </section>
+  <h3>Banco Ripley Chile (2015 - 2019)</h3>
+  <p><em>Analista Comercial Senior</em></p>
+  <ul>
+    <li>Planificación y análisis de ventas multicanal (sucursales, web y call center).</li>
+    <li>Automatización de reportería de gestión comercial mediante herramientas de BI, mejorando tiempos de entrega en un 40%.</li>
+    <li>Apoyo a la estrategia de segmentación de clientes a través de análisis de cohortes y comportamiento de compra.</li>
+  </ul>
+</section>
 
-      <section id="certificaciones">
-        <h2>📚 Certificaciones</h2>
-        <ul>
-          <li>Mercados Financieros - Yale University</li>
-          <li>Excel Avanzado</li>
-          <li>Negociación Internacional</li>
-          <li>Gestión de Proyectos</li>
-          <li>Comunicación Efectiva</li>
-        </ul>
-      </section>
+<section id="educacion">
+  <h2>🎓 Educación</h2>
 
-      <section id="habilidades">
-        <h2>🛠️ Habilidades Técnicas</h2>
-        <ul>
-          <li>Power BI, SQL Server, SAP, Excel avanzado, Jira, Zendesk.</li>
-          <li>Gestión de riesgos operacionales y cumplimiento normativo.</li>
-          <li>Automatización de reportes y data analytics.</li>
-        </ul>
-      </section>
+  <h3>Ingeniería Comercial - Pontificia Universidad Católica de Chile</h3>
+  <ul>
+    <li>Especialización en Finanzas Corporativas y Gestión Estratégica.</li>
+    <li>Proyecto de tesis: "Impacto de la Transformación Digital en la Gestión Financiera de Bancos Chilenos".</li>
+  </ul>
 
-      <section id="proyectos">
-        <h2>📊 Proyectos Relevantes</h2>
-        <ul>
-          <li>Implementación de dashboards de riesgos operativos y recaudación en Zurich Santander.</li>
-          <li>Automatización de reporting regulatorio en BNP Paribas Cardif.</li>
-          <li>Optimización de procesos de venta y análisis de cobertura comercial en Banco Ripley.</li>
-        </ul>
-      </section>
+  <h3>Máster en Administración de Empresas (MBA)</h3>
+  <ul>
+    <li>Enfoque en Finanzas Estratégicas, Innovación Empresarial y Gestión de Proyectos.</li>
+    <li>Participación destacada en simulaciones de mercado y análisis de inversiones.</li>
+  </ul>
 
-      <section id="idiomas">
-        <h2>🗣️ Idiomas</h2>
-        <ul>
-          <li>Español: Nativo</li>
-          <li>Inglés: Basico (C1)</li>
-        </ul>
-      </section>
+  <h3>Magíster en Economía</h3>
+  <ul>
+    <li>Especialización en Macroeconomía Financiera y Política Pública.</li>
+    <li>Investigación aplicada en mercados emergentes y regulación económica.</li>
+  </ul>
 
-      <section id="intereses">
-        <h2>🎯 Intereses Profesionales</h2>
-        <ul>
-          <li>Modelamiento financiero aplicado a riesgos y recaudación.</li>
-          <li>Transformación digital y automatización de procesos financieros.</li>
-          <li>Políticas públicas de sostenibilidad económica.</li>
-        </ul>
-      </section>
+  <h3>Diplomado en Marketing Digital y Gestión Estratégica</h3>
+  <ul>
+    <li>Diseño de estrategias digitales integradas para el sector financiero.</li>
+    <li>Gestión de campañas omnicanales y analítica de conversión.</li>
+  </ul>
+</section>
 
-      <section id="contacto">
-        <h2>📩 Contacto</h2>
-        <p><strong>Email:</strong> <a href="mailto:jo.tajtaj@gmail.com">jo.tajtaj@gmail.com</a></p>
-        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/jos%C3%A9-ignacio-taj-taj" target="_blank">linkedin.com/in/josé-ignacio-taj-taj</a></p>
-      </section>
+<section id="certificaciones">
+  <h2>📚 Certificaciones</h2>
+  <ul>
+    <li>Certificado en Mercados Financieros – Yale University (Coursera Verified).</li>
+    <li>Excel Avanzado aplicado a Finanzas - Pontificia Universidad Católica de Chile.</li>
+    <li>Diplomado en Negociación Internacional - Cámara de Comercio de Santiago.</li>
+    <li>Certificación en Gestión de Proyectos Ágiles - SCRUM Fundamentals Certified (SFC™).</li>
+    <li>Comunicación Efectiva en Ambientes Corporativos – CCL Academy.</li>
+  </ul>
+</section>
 
-    </div>
+<section id="habilidades">
+  <h2>🛠️ Habilidades Técnicas</h2>
+  <ul>
+    <li>Herramientas BI: Power BI, SQL Server, Excel avanzado (Power Query, DAX), SAP BO.</li>
+    <li>Gestión de riesgos: COSO ERM, matrices de riesgos, análisis de incidentes.</li>
+    <li>Automatización de reportes y análisis de KPIs estratégicos.</li>
+    <li>Modelamiento de bases de datos y reporting financiero.</li>
+    <li>Metodologías ágiles: Scrum, Kanban para gestión de proyectos.</li>
+  </ul>
+</section>
 
-  </div>
+<section id="proyectos">
+  <h2>📊 Proyectos Relevantes</h2>
+  <ul>
+    <li>Desarrollo e implementación de dashboards de control de recaudación en Zurich Santander.</li>
+    <li>Automatización del reporte SBR de riesgos operacionales para BNP Paribas Cardif.</li>
+    <li>Optimización de reportería comercial y segmentación de clientes en Banco Ripley.</li>
+  </ul>
+</section>
 
-  <!-- Botón flotante de descarga -->
-  <a href="Curriculum_JoseIgnacioTajTaj.pdf" class="floating-btn" target="_blank">📥 Descargar CV</a>
+<section id="idiomas">
+  <h2>🗣️ Idiomas</h2>
+  <ul>
+    <li>Español: Nativo.</li>
+    <li>Inglés: Avanzado (C1) - Lectura, escritura y comunicación profesional.</li>
+  </ul>
+</section>
+
+<section id="intereses">
+  <h2>🎯 Intereses Profesionales</h2>
+  <ul>
+    <li>Modelamiento financiero y control de riesgos avanzados.</li>
+    <li>Transformación digital en el sector financiero y bancario.</li>
+    <li>Políticas públicas de sostenibilidad económica y digitalización financiera.</li>
+    <li>Aplicaciones de machine learning en predicción de riesgos crediticios.</li>
+  </ul>
+</section>
+
+<section id="contacto">
+  <h2>📩 Contacto</h2>
+  <p><strong>Email:</strong> <a href="mailto:jo.tajtaj@gmail.com">jo.tajtaj@gmail.com</a></p>
+  <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/jos%C3%A9-ignacio-taj-taj" target="_blank">linkedin.com/in/josé-ignacio-taj-taj</a></p>
+</section>
+
+  </div> <!-- cierre de .main -->
+
+</div> <!-- cierre de .layout -->
+
+<!-- Botón flotante de descarga -->
+<a href="./Curriculum_JoseIgnacioTajTaj.pdf.pdf" class="floating-btn" target="_blank">📥 Descargar CV</a>
+
+<!-- Modal para la foto de perfil -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+</div>
+
+<script>
+  // Código para el modal de la foto
+  var modal = document.getElementById("myModal");
+  var img = document.getElementById("profilePhoto");
+  var modalImg = document.getElementById("img01");
+  var span = document.getElementsByClassName("close")[0];
+
+  img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+  }
+
+  span.onclick = function() { 
+    modal.style.display = "none";
+  }
+</script>
 
 </body>
 </html>
-
