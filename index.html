@@ -4,14 +4,112 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>José Ignacio Taj-Taj | CV</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" href="https://dummyimage.com/32x32/0056b3/ffffff.png&text=JT" type="image/png">
+
   <style>
+    /* GENERAL */
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      padding: 20px;
+      padding-top: 70px;
       background: #f4f6f8;
       color: #333;
+      scroll-behavior: smooth;
     }
+
+    /* NAVBAR */
+    .navbar {
+      background-color: #0056b3;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 999;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 60px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 14px 20px;
+      transition: background-color 0.3s;
+    }
+
+    .navbar a:hover {
+      background-color: #007bff;
+      border-radius: 8px;
+    }
+
+    /* BANNER */
+    .banner {
+      background: linear-gradient(90deg, #0056b3, #007bff, #00d4ff);
+      background-size: 600% 600%;
+      animation: animatedBackground 10s ease infinite, fadeScaleIn 1s ease-out forwards;
+      text-align: center;
+      padding: 50px 20px;
+      border-radius: 12px;
+      color: white;
+      margin: 20px;
+      margin-top: 30px;
+      opacity: 0;
+      transform: scale(0.95);
+    }
+
+    @keyframes animatedBackground {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    @keyframes fadeScaleIn {
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .profile-photo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid white;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+      transition: transform 0.3s ease;
+    }
+
+    .profile-photo:hover {
+      transform: scale(1.05);
+    }
+
+    .download-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 30px;
+      background-color: #ffffff;
+      color: #0056b3;
+      font-weight: bold;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border: 2px solid white;
+    }
+
+    .download-button:hover {
+      background-color: #0056b3;
+      color: white;
+      border: 2px solid white;
+    }
+
+    /* CONTENIDO */
     .container {
       max-width: 900px;
       margin: auto;
@@ -19,37 +117,103 @@
       padding: 40px;
       border-radius: 12px;
       box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      margin-top: 30px;
     }
+
+    .section {
+      margin-bottom: 50px;
+      opacity: 0;
+      transform: translateY(40px);
+      animation: fadeSlideIn 1s ease-out forwards;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .section:nth-child(odd) {
+      animation-delay: 0.5s;
+    }
+
+    .section:nth-child(even) {
+      animation-delay: 0.7s;
+    }
+
+    .section:hover {
+      box-shadow: 0 0 20px rgba(0, 123, 255, 0.2);
+      transform: scale(1.02);
+    }
+
+    @keyframes fadeSlideIn {
+      to {
+        opacity: 1;
+        transform: translateY(0px);
+      }
+    }
+
     h1, h2, h3 {
       color: #0056b3;
     }
+
     a {
       color: #007bff;
       text-decoration: none;
     }
-    .section {
-      margin-bottom: 40px;
+
+    /* CONTACT BUTTONS */
+    .contact-button {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 24px;
+      background-color: #0056b3;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 30px;
+      transition: background-color 0.3s;
     }
+
+    .contact-button:hover {
+      background-color: #007bff;
+    }
+
+    /* FOOTER */
     footer {
       text-align: center;
       margin-top: 60px;
       font-size: 0.9em;
-      color: #777;
+      background: #0056b3;
+      color: white;
+      padding: 20px;
+      border-radius: 0 0 12px 12px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeSlideIn 1s ease-out forwards 1.2s;
     }
   </style>
 </head>
 
 <body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="#inicio">Inicio</a>
+    <a href="#experiencia">Experiencia</a>
+    <a href="#educacion">Educación</a>
+    <a href="#contacto">Contacto</a>
+  </div>
+
+  <!-- Banner -->
+  <div class="banner" id="inicio">
+    <h1>¡Bienvenido a mi sitio profesional!</h1>
+    <img src="perfil-picaai.png" alt="Foto de José Ignacio Taj-Taj" class="profile-photo">
+    <p>Explora mi CV, mi trayectoria y mis proyectos.</p>
+    <a href="Curriculum_JoseIgnacioTajTaj.pdf" target="_blank" class="download-button">📄 Descargar mi CV</a>
+  </div>
+
+  <!-- Contenido -->
   <div class="container">
     <h1>José Ignacio Taj-Taj</h1>
     <h3>Analista Senior en Finanzas | Ingeniero Comercial UC | MBA</h3>
 
-    <div class="section">
-      <h2>📄 Sobre mí</h2>
-      <p>Como Analista Senior de Recaudación en Zurich Santander, gestiono procesos de pagos y riesgos operacionales, aplicando análisis financiero estratégico para fortalecer el negocio asegurador.</p>
-    </div>
-
-    <div class="section">
+    <div class="section" id="experiencia">
       <h2>💼 Experiencia Profesional</h2>
       <ul>
         <li><strong>Zurich Santander</strong> - Analista Senior de Recaudación (2023 - 2025)</li>
@@ -58,7 +222,7 @@
       </ul>
     </div>
 
-    <div class="section">
+    <div class="section" id="educacion">
       <h2>🎓 Educación</h2>
       <ul>
         <li>Ingeniería Comercial - Pontificia Universidad Católica de Chile</li>
@@ -77,16 +241,16 @@
       </ul>
     </div>
 
-    <div class="section">
+    <div class="section" id="contacto">
       <h2>📩 Contacto</h2>
-      <p><strong>Email:</strong> <a href="mailto:jo.tajtaj@gmail.com">jo.tajtaj@gmail.com</a></p>
-      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/jos%C3%A9-ignacio-taj-taj" target="_blank">linkedin.com/in/josé-ignacio-taj-taj</a></p>
-      <p><strong>Descargar CV:</strong> <a href="Curriculum_JoseIgnacioTajTaj.pdf" target="_blank">Aquí</a></p>
+      <a href="mailto:jo.tajtaj@gmail.com" class="contact-button">📧 Enviar correo</a>
+      <a href="https://www.linkedin.com/in/jos%C3%A9-ignacio-taj-taj" target="_blank" class="contact-button">💼 Ver LinkedIn</a>
     </div>
 
     <footer>
-      Última actualización: Abril 2025
+      <p>© 2025 José Ignacio Taj-Taj | Última actualización: Abril 2025</p>
     </footer>
   </div>
+
 </body>
 </html>
